@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 # extract last digit
-lastDigit = abs(number) % 10
+lastDigit = number % 10
 # Print the required output
 print("Last digit of", number, "is", lastDigit, "and is", end=" ")
 
