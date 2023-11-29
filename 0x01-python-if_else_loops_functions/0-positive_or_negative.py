@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10, 10)
-#extract the last digit of the number
-lastDigit = abs(number) % 10
-#print the required output
+# extract the last digit of the number
+lastDigit = (number) % 10
+# print the required output
 print("Last digit of", number, "is", lastDigit, "and is", end=" ")
 if lastDigit > 5:
     print("greater than 5")
