@@ -8,14 +8,14 @@
  *
  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
  */
-int is_palindrome(listint_t **head);
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);  /* An empty list or a list with one element is a palindrome*/
 	listint_t *slow_ptr = *head;
 	listint_t *fast_ptr = *head;
 	listint_t *second_half;
+	
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);  /* An empty list or a list with one element is a palindrome*/
 
     /* Move slow_ptr to the middle of the list*/
 	while (fast_ptr != NULL && fast_ptr->next != NULL)
