@@ -7,4 +7,6 @@ It describes an empty square class
 
 class Square:
     def square(self):
+        """Initializing an empty square"""
+
         pass
