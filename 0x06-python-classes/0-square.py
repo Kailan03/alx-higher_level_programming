@@ -6,4 +6,5 @@ It describes an empty square class
 
 
 class Square:
-    pass
+    def square(self):
+        pass
