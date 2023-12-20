@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-""" This class represents a square.
-
-It describes an empty square class
-"""
-
+"""It ddescribes a square"""
 
 class Square:
-    def square(self):
-        """Initializing an empty square"""
+        """Represents an empty square"""
 
         pass
