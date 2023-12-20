@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""represents a square"""
+
+
 class Square:
     """This class defines a square.
 
@@ -10,7 +13,8 @@ class Square:
         """Initializes a Square instance with an optional size.
 
         Args:
-            size (int, optional): The size of each side of the square. Defaults to 0.
+            size (int, optional):
+            The size of each side of the square. Defaults to 0.
 
         Raises:
             TypeError: If size is not an integer.
