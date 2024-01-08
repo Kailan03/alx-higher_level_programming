@@ -18,13 +18,15 @@ Examples:
     TypeError: first_name must be a string or last_name must be a string
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Prints a personalized greeting.
 
     Parameters:
     - first_name (str): The first name for the greeting.
-    - last_name (str): The last name for the greeting. Default is an empty string.
+    - last_name (str): The last name for the greeting.
+    Default is an empty string.
 
     Raises:
     - TypeError: If first_name or last_name is not a string.
