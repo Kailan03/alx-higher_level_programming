@@ -1,0 +1,35 @@
+"""
+This module provides a function for adding two integers.
+
+Functions:
+    - add_integer(a, b=98): Adds two integers.
+
+Examples:
+>>> add_integer(5, 3)
+8
+
+>>> add_integer(5.5, 3)
+8
+
+>>> add_integer(5, 3.5)
+8
+
+>>> add_integer(5.5, 3.5)
+8
+
+>>> add_integer("5", 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer or b must be an integer
+
+>>> add_integer([5], 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer or b must be an integer
+
+>>> add_integer("5", "3")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer or b must be an integer
+"""
+

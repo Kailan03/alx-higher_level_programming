@@ -1,0 +1,18 @@
+"""
+This module provides a function for printing a personalized greeting.
+
+Functions:
+    - say_my_name(first_name, last_name=""): Prints a personalized greeting.
+
+Examples:
+    >>> say_my_name("Rahmat", "Kilani")
+    My name is Rahmat Kilani
+
+    >>> say_my_name("Rahmat")
+    My name is Rahmat
+
+    >>> say_my_name(123, "Rahmat")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string or last_name must be a string
+"""

@@ -1,0 +1,28 @@
+"""
+This module provides a function for printing text with 2 new lines after specific characters.
+
+Functions:
+    - text_indentation(text): Prints text with 2 new lines after each of these characters: ., ? and :.
+
+Examples:
+    >>> text_indentation("This is a simple sentence.")
+    This is a simple sentence.
+    
+    >>> text_indentation("A question? Should be on a new line.")
+    A question?
+    Should be on a new line.
+
+    >>> text_indentation("Colons: Separate statements.")
+    Colons:
+    Separate statements.
+
+    >>> text_indentation("Multiple. Sentences. In one line?")
+    Multiple.
+    Sentences.
+    In one line?
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+"""
