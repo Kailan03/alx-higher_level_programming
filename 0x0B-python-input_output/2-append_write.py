@@ -1,37 +1,35 @@
 #!/usr/bin/python3
 """
-defines a funcion that appends a string at the end of a file
-and returns number of character added
+defines a function that appends a string at the end of  a file
+and returns the number of character added
 """
-
-
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
-    Writes a str to a text file and returns the number of characters written.
+    Appends a string at the end of a text file (UTF8) and returns the number of characters added.
 
     Parameters:
-    - filename (str): The name of the file to be written.
-    - text (str): The string to be written to the file.
+    - filename (str): The name of the file to be appended.
+    - text (str): The string to be appended to the file.
 
     Returns:
-    - int: The number of characters written to the file.
+    - int: The number of characters added to the file.
 
     Example:
-    >>> write_file("output.txt", "Hello, World!")
-    13
+    >>> append_write("existing_file.txt", " Appending new content.")
+    25
 
     Additional Tests:
-    >>> write_file("existing_file.txt", "New content.")
-    # Overwriting an existing file
-    # Output: 12
+    >>> append_write("new_file.txt", "This is the first line.")
+    # Appending to a new file
+    # Output: 24
 
-    >>> write_file("new_file.txt", "")
-    # Writing an empty string
+    >>> append_write("empty_file.txt", "")
+    # Appending an empty string
     # Output: 0
     """
 
     try:
-        with open(filename, "w", encoding="utf-8") as file:
+        with open(filename, mode="a", encoding="utf-8") as file:
             file.write(text)
             return len(text)
     except TypeError:
