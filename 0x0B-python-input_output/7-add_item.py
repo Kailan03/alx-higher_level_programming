@@ -6,8 +6,8 @@ and then save them to a file
 
 
 import sys
-from save_to_json_file import save_to_json_file
-from load_from_json_file import load_from_json_file
+from 5-save_to_json_file import save_to_json_file
+from 6-load_from_json_file import load_from_json_file
 
 
 def add_and_save_to_file():
@@ -28,20 +28,17 @@ def add_and_save_to_file():
     python script.py 1 2 3 4 5
     # Creates add_item.json with the content: [1, 2, 3, 4, 5]
     """
+# Load existing items from the file
+try:
+    existing_items = load_from_json_file("add_item.json")
+except FileNotFoundError:
+    existing_items = []
 
-    # Load existing items from the file if it exists
-    try:
-        existing_items = load_from_json_file("add_item.json")
-    except FileNotFoundError:
-        existing_items = []
+# Add new items from command line arguments
+new_items = sys.argv[1:]
 
-    # Add new items from command line arguments
-    new_items = sys.argv[1:]
-    all_items = existing_items + new_items
+# Combine existing and new items
+all_items = existing_items + new_items
 
-    # Save the updated list to the file
-    save_to_json_file(all_items, "add_item.json")
-
-
-if __name__ == "__main__":
-    add_and_save_to_file()
+# Save the combined list to the file
+save_to_json_file(all_items, "add_item.json")
