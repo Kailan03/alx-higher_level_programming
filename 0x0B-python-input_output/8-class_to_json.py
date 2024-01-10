@@ -41,6 +41,6 @@ def class_to_json(obj):
     else:
         # Handle other types (including custom classes)
         # For simplicity, assuming that custom classes have
-        attributes that are serializable
+        # attributes that are serializable
         return {key: class_to_json(getattr(obj, key))
                 for key in dir(obj) if not key.startswith("__")}
