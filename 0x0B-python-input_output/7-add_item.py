@@ -5,8 +5,8 @@ and then save them to a file
 """
 
 import sys
-from 5-save_to_json_file import save_to_json
-from 6-load_from_json_file import load_from_json
+from 5-save_to_json_file import save_to_json_file
+from 6-load_from_json_file import load_from_json_file
 
 
 def add_and_save_to_file():
