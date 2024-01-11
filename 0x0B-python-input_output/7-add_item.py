@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-
-
-import sys
-from 5-save_to_json_file import save_to_json_file
-from 6-load_from_json_file import load_from_json_file
 """
 defines a script that adds all arguments to a Python list,
 and then save them to a file
 """
+
+import sys
+from 5-save_to_json_file import save_to_json
+from 6-load_from_json_file import load_from_json
 
 
 def add_and_save_to_file():
@@ -28,6 +27,8 @@ def add_and_save_to_file():
     python script.py 1 2 3 4 5
     # Creates add_item.json with the content: [1, 2, 3, 4, 5]
     """
+
+
 # Load existing items from the file
 try:
     existing_items = load_from_json_file("add_item.json")
