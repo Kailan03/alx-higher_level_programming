@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Define the function add
-function add(a, b) {
+function add (a, b) {
   return a + b;
 }
 
@@ -14,6 +14,5 @@ if (!isNaN(num1) && !isNaN(num2)) {
   // Print the addition of the two integers
   console.log(add(num1, num2));
 } else {
-  console.log("Invalid input. Please provide two integers.");
+  console.log('Invalid input. Please provide two integers.');
 }
-

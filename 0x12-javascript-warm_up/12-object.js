@@ -9,11 +9,10 @@ if (args.length === 0 || args.length === 1) {
 } else {
   // Convert arguments to integers and replace 12 with 89
   const integers = args.map(Number).map(num => num === 12 ? 89 : num).sort((a, b) => b - a);
-  
+
   // Find the second biggest integer
   const secondBiggest = integers[1];
-  
+
   // Print the second biggest integer
   console.log(secondBiggest);
 }
-

@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Define the factorial function recursively
-function factorial(n) {
+function factorial (n) {
   // Base case: factorial of 0 or NaN is 1
   if (isNaN(n) || n === 0) {
     return 1;
@@ -16,4 +16,3 @@ const num = parseInt(process.argv[2]);
 
 // Compute the factorial and print the result
 console.log(factorial(num));
-

@@ -9,11 +9,10 @@ if (args.length === 0 || args.length === 1) {
 } else {
   // Convert arguments to integers and sort them in descending order
   const integers = args.map(Number).sort((a, b) => b - a);
-  
+
   // Find the second biggest integer
   const secondBiggest = integers[1];
-  
+
   // Print the second biggest integer
   console.log(secondBiggest);
 }
-
