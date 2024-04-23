@@ -1,60 +1,30 @@
 #!/usr/bin/python3
 """
-This module provides a function for adding two integers.
 
-Functions:
-    - add_integer(a, b=98): Adds two integers.
+This module is composed by a function that adds two numbers
 
-Examples:
-    >>> add_integer(5, 3)
-    8
-
-    >>> add_integer(5.5, 3)
-    8
-
-    >>> add_integer(5, 3.5)
-    8
-
-    >>> add_integer(5.5, 3.5)
-    8
-
-    >>> add_integer("5", 3)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer or b must be an integer
-
-    >>> add_integer([5], 3)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer or b must be an integer
-
-    >>> add_integer("5", "3")
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer or b must be an integer
 """
 
-def add_integer(a, b=98):
-    """
-    Adds two integers.
 
-    Parameters:
-    - a: int or float, the first operand.
-    - b: int or float, the second operand. Default is 98.
+def add_integer(a, b=98):
+    """ Function that adds two integer and/or float numbers
+
+    Args:
+        a: first number
+        b: second number
 
     Returns:
-    - int: The addition of a and b.
+        The addition of the two given numbers
 
     Raises:
-    - TypeError: If either a or b is not an integer or float.
-    """
-    # Check if a and b are integers or floats
-    if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
-        raise TypeError("a must be an integer or b must be an integer")
+        TypeError: If a or b aren't integer and/or float numbers
 
-    # Cast a and b to integers if they are floats
+    """
+
+    if not isinstance(a, int) and not isinstance(a, float):
+        raise TypeError("a must be an integer")
+    if not isinstance(b, int) and not isinstance(b, float):
+        raise TypeError("b must be an integer")
     a = int(a)
     b = int(b)
-
-    # Return the addition of a and b
-    return a + b
+    return (a + b)

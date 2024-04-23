@@ -1,55 +1,36 @@
 #!/usr/bin/python3
 """
-This module provides a function for printing text with 2 new lines after specific characters.
 
-Functions:
-    - text_indentation(text): Prints text with 2 new lines after each of these characters: ., ? and :.
+Module composed by a function that prints 2 new lines after ".?:" characters
 
-Examples:
-    >>> text_indentation("This is a simple sentence.")
-    This is a simple sentence.
-
-    >>> text_indentation("A question? Should be on a new line.")
-    A question?
-    Should be on a new line.
-
-    >>> text_indentation("Colons: Separate statements.")
-    Colons:
-    Separate statements.
-
-    >>> text_indentation("Multiple. Sentences. In one line?")
-    Multiple.
-    Sentences.
-    In one line?
-
-    >>> text_indentation(123)
-    Traceback (most recent call last):
-    ...
-    TypeError: text must be a string
 """
 
-def text_indentation(text):
-    """
-    Prints text with 2 new lines after each of these characters: ., ? and :.
 
-    Parameters:
-    - text (str): The input text.
+def text_indentation(text):
+    """ Function that prints 2 new lines after ".?:" characters
+
+    Args:
+        text: input string
+
+    Returns:
+        No return
 
     Raises:
-    - TypeError: If text is not a string.
+        TypeError: If text is not a string
+
+
     """
-    # Check if text is a string
-    if not isinstance(text, str):
+
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    # Iterate through the characters in the text
-    for char in text:
-        print(char, end='')
+    s = text[:]
 
-        # Print 2 new lines after specific characters
-        if char in ('.', '?', ':'):
-            print("\n\n", end='')
+    for d in ".?:":
+        list_text = s.split(d)
+        s = ""
+        for i in list_text:
+            i = i.strip(" ")
+            s = i + d if s is "" else s + "\n\n" + i + d
 
-    # Print a newline at the end if the last character is not one of the specified characters
-    if text and text[-1] not in ('.', '?', ':'):
-        print()
+    print(s[:-3], end="")
